@@ -1,0 +1,47 @@
+class AssetsManager{
+  static const String imgPath = 'assets/images/';
+  static const String arrow = '${imgPath}arrow.png';
+  static const String logo = '${imgPath}logo.png';
+  static const String cam = '${imgPath}cam.png';
+  static const String filter = '${imgPath}filter.png';
+  static const String search = '${imgPath}search.png';
+  static const String heartt = '${imgPath}heartt.png';
+  static const String staar = '${imgPath}staar.png';
+  static const String home = '${imgPath}home.png';
+  static const String cart = '${imgPath}cart.png';
+  static const String purchases = '${imgPath}purchases.png';
+  static const String more = '${imgPath}more.png';
+  static const String noti = '${imgPath}noti.png';
+  static const String bin = '${imgPath}bin.png';
+  static const String follow = '${imgPath}follow.png';
+  static const String unfollow = '${imgPath}unfollow.png';
+  static const String close = '${imgPath}close.png';
+  static const String aboutus = '${imgPath}aboutus.png';
+  static const String pocket = '${imgPath}pocket.png';
+  static const String medal = '${imgPath}medal.png';
+  static const String user = '${imgPath}user.png';
+  static const String poket = '${imgPath}poket.png';
+  static const String purchese = '${imgPath}purchese.png';
+  static const String Group = '${imgPath}Group.png';
+  static const String hearts = '${imgPath}hearts.png';
+  static const String starrrr = '${imgPath}starrrr.png';
+  static const String calll = '${imgPath}calll.png';
+  static const String share = '${imgPath}share.png';
+  static const String setting = '${imgPath}setting.png';
+  static const String exit = '${imgPath}exit.png';
+  static const String cards = '${imgPath}cards.png';
+  static const String sim = '${imgPath}sim.png';
+  static const String mastercard = '${imgPath}mastercard.png';
+  static const String heart = '${imgPath}heart.png';
+  static const String shopping = '${imgPath}shopping-cart.png';
+  static const String bell = '${imgPath}bell.png';
+  static const String clock = '${imgPath}clock.png';
+  static const String deleteee = '${imgPath}deleteee.png';
+  static const String face = '${imgPath}face.png';
+  static const String twitter = '${imgPath}twitter.png';
+  static const String snapchat = '${imgPath}snapchat.png';
+  static const String starr = '${imgPath}starr.png';
+  static const String report = '${imgPath}report.png';
+  static const String questionsbro = '${imgPath}Questionsbro.png';
+
+}
