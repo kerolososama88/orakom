@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:orakom/core/constant/app_colors.dart';
+import 'package:orakom/core/constant/text_style.dart';
 import 'package:orakom/core/widgets/custom_text_bottm.dart';
 import 'package:orakom/features/auth/presentation/restore_password/presentation/views/restore_password_view.dart';
 import 'package:orakom/features/layout/presentation/view/layout.dart';
@@ -46,16 +48,31 @@ class ActionAuth extends StatelessWidget {
             function: () {},
             text: 'الدخول كزائر',
           ),
-          customTextBottom(
-            function: () {
-              Navigator.push(
-                context,
+          InkWell(
+            onTap: () {
+              Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) => const RegisterView(),
                 ),
               );
             },
-            text: 'لا يوجد لديك حساب ؟ قم بإنشاء حساب',
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'لا يوجد لديك حساب ؟',
+                  style: Style.textStyle14.copyWith(
+                    color: AppColors.primary,
+                  ),
+                ),
+                Text(
+                  ' قم بإنشاء حساب',
+                  style: Style.textStyleUnderLine14.copyWith(
+                    color: AppColors.primary,
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

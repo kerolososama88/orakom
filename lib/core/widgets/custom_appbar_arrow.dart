@@ -29,14 +29,17 @@ class CustomAppbarArrow extends StatelessWidget {
             color: AppColors.primary,
           ),
           child: Center(
-            child: Text(
-              text,
-              style: Style.textStyle16,
+            child: Padding(
+              padding: EdgeInsets.only(top:23 .h),
+              child: Text(
+                text,
+                style: Style.textStyle16,
+              ),
             ),
           ),
         ),
         PositionedDirectional(
-          top: 39.h,
+          bottom: 30.h,
           start: 13.w,
           child: InkWell(
             onTap: (){

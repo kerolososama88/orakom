@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:orakom/core/constant/app_colors.dart';
 import 'package:orakom/core/constant/text_style.dart';
 
 class CustomAppbar extends StatelessWidget {
@@ -16,12 +17,15 @@ class CustomAppbar extends StatelessWidget {
           bottomLeft: Radius.circular(30.r),
           bottomRight: Radius.circular(30.r),
         ),
-        color: const Color.fromRGBO(61, 155, 114, 1),
+        color: AppColors.primary,
       ),
-      alignment: Alignment.center,
-      child: Text(
-        text,
-        style:Style.textStyle16,
+      alignment: Alignment.bottomCenter,
+      child: Padding(
+        padding:  EdgeInsets.only(bottom: 27.h),
+        child: Text(
+          text,
+          style:Style.textStyle16,
+        ),
       ),
     );
   }

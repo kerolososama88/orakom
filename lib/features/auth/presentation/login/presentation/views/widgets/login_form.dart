@@ -5,6 +5,7 @@ import 'package:orakom/features/auth/presentation/login/presentation/manger/logi
 
 import '../../../../../../../core/constant/app_colors.dart';
 import '../../../../../../../core/constant/text_style.dart';
+import '../../../../../../../core/widgets/custom_text_field_pass.dart';
 import '../../manger/login_state.dart';
 
 class LoginForm extends StatelessWidget {
@@ -25,8 +26,10 @@ class LoginForm extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(
+            height: 11.h,
+          ),
           TextFormField(
-            // initialValue: '+966',
             decoration: InputDecoration(
               hintText: 'أدخل رقم الجوال',
               hintStyle: Style.textStyle12,
@@ -45,17 +48,19 @@ class LoginForm extends StatelessWidget {
                     return Padding(
                       padding: EdgeInsets.only(left: 14.w),
                       child: DropdownButton(
-                        value: state is ItemState ? state.item : LoginCubit.get(context).listItem.first,
+                        value: state is ItemState
+                            ? state.item
+                            : LoginCubit.get(context).listItem.first,
                         items: LoginCubit.get(context)
                             .listItem
                             .map(
                               (item) => DropdownMenuItem(
-                            value: item,
-                            child: Text(
-                              item,
-                            ),
-                          ),
-                        )
+                                value: item,
+                                child: Text(
+                                  item,
+                                ),
+                              ),
+                            )
                             .toList(),
                         onChanged: (newValue) {
                           LoginCubit.get(context).changeValue(newValue!);
@@ -70,33 +75,15 @@ class LoginForm extends StatelessWidget {
           SizedBox(
             height: 19.66.h,
           ),
-          Align(
-            alignment: AlignmentDirectional.topStart,
-            child: Text(
-              'كلمة المرور',
-              style: Style.textStyle14.copyWith(
-                color: AppColors.textBlack,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 11.34.h,
-          ),
           BlocBuilder<LoginCubit, LoginState>(
             builder: (context, state) {
-              return TextFormField(
-                onTapOutside: (v) => FocusScope.of(context).unfocus(),
-                obscureText: LoginCubit.get(context).isPassword ? true : false,
-                controller: LoginCubit.get(context).passwordController,
-                decoration: InputDecoration(
-                  fillColor: AppColors.fill,
-                  filled: true,
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide.none,
-                    borderRadius: BorderRadius.circular(16.r),
-                  ),
-                  suffixIcon: LoginCubit.get(context).suffixWidget(),
-                ),
+              return CustomTextFieldPass(
+                obscureText:
+                LoginCubit.get(context).isPassword ? true : false,
+                controller:
+                LoginCubit.get(context).passwordController,
+                suffixIcon: LoginCubit.get(context).suffixWidget(),
+                text: 'كلمة المرور',
               );
             },
           ),

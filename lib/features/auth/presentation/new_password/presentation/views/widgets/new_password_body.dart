@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:orakom/core/widgets/custom_appbar.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:orakom/core/widgets/custom_appbar_arrow.dart';
 import 'package:orakom/core/widgets/logo_auth.dart';
 import 'package:orakom/features/auth/presentation/active_code/presentation/views/widgets/active_code_text.dart';
 import 'package:orakom/features/auth/presentation/new_password/presentation/views/widgets/new_password_form.dart';
@@ -11,14 +12,18 @@ class NewPasswordBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const SingleChildScrollView(
+    return SingleChildScrollView(
       child: Column(
         children: [
-          CustomAppbar(text: 'إستعادة كلمة المرور',),
-          LogoAuth(),
-          ActiveCodeText(),
-          NewPasswordForm(),
-          NewPasswordAction(),
+          const CustomAppbarArrow(
+            text: 'إستعادة كلمة المرور',
+          ),
+          LogoAuth(
+            bottom: 24.h,
+          ),
+          const ActiveCodeText(),
+          const NewPasswordForm(),
+          const NewPasswordAction(),
         ],
       ),
     );

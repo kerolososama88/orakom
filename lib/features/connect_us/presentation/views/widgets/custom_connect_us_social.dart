@@ -25,7 +25,7 @@ class CustomConnectUsSocial extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 35.w,vertical: 30.h),
+          padding: EdgeInsets.symmetric(horizontal: 56.w,vertical: 30.h),
           child: const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

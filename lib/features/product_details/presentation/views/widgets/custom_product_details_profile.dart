@@ -5,6 +5,8 @@ import 'package:orakom/core/constant/assets_manager.dart';
 import 'package:orakom/core/constant/text_style.dart';
 import 'package:orakom/features/profile/presentation/view/profile_view.dart';
 
+import '../../../../follow_service/presentation/views/follow_service_view.dart';
+
 class CustomProductDetailsProfile extends StatelessWidget {
   const CustomProductDetailsProfile({super.key});
 
@@ -90,15 +92,30 @@ class CustomProductDetailsProfile extends StatelessWidget {
                       SizedBox(
                         width: 140.w,
                       ),
-                      Image.asset(
-                          width: 12.w, height: 12.h, AssetsManager.report),
-                      SizedBox(
-                        width: 7.w,
-                      ),
-                      Text(
-                        'الإبلاغ',
-                        style: Style.textStyle12.copyWith(
-                          color: AppColors.reportColor,
+                      InkWell(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => const FollowServiceView(),
+                            ),
+                          );
+                        },
+                        child: Row(
+                          children: [
+                            Image.asset(
+                                width: 12.w,
+                                height: 12.h,
+                                AssetsManager.report),
+                            SizedBox(
+                              width: 7.w,
+                            ),
+                            Text(
+                              'الإبلاغ',
+                              style: Style.textStyle12.copyWith(
+                                color: AppColors.reportColor,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ],

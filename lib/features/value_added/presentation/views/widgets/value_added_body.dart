@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:orakom/core/widgets/custom_appbar_arrow.dart';
 import 'package:orakom/core/widgets/logo_auth.dart';
 
@@ -11,19 +12,19 @@ class ValueAddedBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        CustomAppbarArrow(
+        const CustomAppbarArrow(
           text: 'فاتورة القيمة المضافة',
         ),
         Expanded(
           child: SingleChildScrollView(
             child: Column(
               children: [
-                LogoAuth(),
-                CustomTaxNumber(),
-                CustomValueDetails(),
-                CustomNumberOfProducts(),
+                LogoAuth(bottom: 53.h,),
+                const CustomTaxNumber(),
+                const CustomValueDetails(),
+                const CustomNumberOfProducts(),
               ],
             ),
           ),

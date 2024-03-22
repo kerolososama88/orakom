@@ -58,7 +58,7 @@ class CustomProductDetailsSliderPhoto extends StatelessWidget {
             ),
             PositionedDirectional(
               bottom: 10.h,
-              end: 139.w,
+              start: 130.w,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: imageListDetails.map(

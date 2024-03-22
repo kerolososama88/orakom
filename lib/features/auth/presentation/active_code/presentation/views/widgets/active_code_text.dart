@@ -8,10 +8,10 @@ class ActiveCodeText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 55.w,),
-      child:  Text(
+      padding: EdgeInsets.only(left: 55.w, right: 55.w,bottom: 36.h),
+      child: Text(
         'هذا النص هو مثال لنص يمكن ان يستبدل في نفس المساحه، لقد تم توليد هذا النص من',
-      style: Style.textStyle13,
+        style: Style.textStyle13,
         textAlign: TextAlign.center,
       ),
     );

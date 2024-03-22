@@ -33,7 +33,7 @@ class CodeCounter extends StatelessWidget {
                 style: Style.textStyle12,
               ),
               Countdown(
-                seconds: 3,
+                seconds: 60,
                 build: (BuildContext context, double time) =>
                     Text(
                       time.toString(),

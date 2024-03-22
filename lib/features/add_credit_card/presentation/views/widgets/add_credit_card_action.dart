@@ -11,7 +11,9 @@ class AddCreditCardAction extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(top: 25.0.h),
       child: defaultButtom(
-        function: () {},
+        function: () {
+          Navigator.of(context).pop();
+        },
         color: AppColors.primary,
         text: 'إضافة البطاقة',
       ),

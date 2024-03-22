@@ -42,6 +42,9 @@ class AssetsManager{
   static const String snapchat = '${imgPath}snapchat.png';
   static const String starr = '${imgPath}starr.png';
   static const String report = '${imgPath}report.png';
+  static const String person = '${imgPath}person.png';
+  static const String feather = '${imgPath}feather-share.png';
+  static const String information = '${imgPath}information.png';
   static const String questionsbro = '${imgPath}Questionsbro.png';
 
 }

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../core/constant/app_colors.dart';
 import '../../core/widgets/logo_auth.dart';
@@ -50,7 +51,7 @@ class _NewSplashState extends State<NewSplash> {
   Widget build(BuildContext context) {
     return  Container(
       color: AppColors.splashColor,
-      child: const LogoAuth(),
+      child:  LogoAuth(bottom: 53.h,),
     );
   }
 

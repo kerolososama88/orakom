@@ -9,12 +9,19 @@ class CustomCommonQuestionsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        CustomConnectUsTapLogo(),
-        CustomCommonQuestionsTitle(),
-        CustomExpansionTitleCommonQuestions(),
-      ],
+    return const SingleChildScrollView(
+      child: Column(
+        children: [
+          CustomConnectUsTapLogo(),
+          CustomCommonQuestionsTitle(),
+          CustomExpansionTitleCommonQuestions(),
+          CustomExpansionTitleCommonQuestions(),
+          CustomExpansionTitleCommonQuestions(),
+          CustomExpansionTitleCommonQuestions(),
+          CustomExpansionTitleCommonQuestions(),
+
+        ],
+      ),
     );
   }
 }

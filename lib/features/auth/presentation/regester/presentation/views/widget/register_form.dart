@@ -28,6 +28,18 @@ class RegisterForm extends StatelessWidget {
           SizedBox(
             height: 12.5.h,
           ),
+          Align(
+            alignment: AlignmentDirectional.topStart,
+            child: Text(
+              'رقم الجوال',
+              style: Style.textStyle14.copyWith(
+                color: AppColors.textBlack,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 11.h,
+          ),
           TextFormField(
             decoration: InputDecoration(
               hintText: 'أدخل رقم الجوال',

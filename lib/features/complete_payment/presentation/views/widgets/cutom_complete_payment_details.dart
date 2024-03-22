@@ -72,14 +72,14 @@ class CustomCompletePaymentDetails extends StatelessWidget {
               ),
               Text(
                 '1490 ر.س',
-                style: Style.textStyle15.copyWith(
+                style: Style.textStyle17.copyWith(
                   color: AppColors.primary,
                 ),
               ),
             ],
           ),
           Padding(
-            padding: EdgeInsets.only(top: 43.h,bottom: 12.h,left: 26.w,right: 25.w),
+            padding: EdgeInsets.only(top: 35.h,left: 26.w,right: 25.w),
             child: Text(
               'يرجى مراجعة طلبك. بإرسال طلبك ، فإنك توافق على شروط الخدمة وسياسة الخصوصية الخاصة بنا',
               style: Style.textStyle12.copyWith(

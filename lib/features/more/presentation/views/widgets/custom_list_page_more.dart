@@ -25,9 +25,11 @@ class CustomListPageMore extends StatelessWidget {
           text: 'حسابي',
           image: AssetsManager.user,
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => const MyAccountView(),
-            ));
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => const MyAccountView(),
+              ),
+            );
           },
           color: AppColors.primary.withOpacity(.48),
         ),
@@ -69,7 +71,7 @@ class CustomListPageMore extends StatelessWidget {
         ),
         CustomItemPageMore(
           text: 'مقدمي الخدمة المتابعيين',
-          image: AssetsManager.purchese,
+          image: AssetsManager.person,
           onTap: () {
             Navigator.of(context).push(
               MaterialPageRoute(
@@ -113,7 +115,7 @@ class CustomListPageMore extends StatelessWidget {
         ),
         CustomItemPageMore(
           text: 'الشكاوي والمقترحات',
-          image: AssetsManager.calll,
+          image: AssetsManager.feather,
           onTap: () {
             Navigator.of(context).push(
               MaterialPageRoute(
@@ -143,7 +145,7 @@ class CustomListPageMore extends StatelessWidget {
         ),
         CustomItemPageMore(
           text: 'عن المنصة',
-          image: AssetsManager.setting,
+          image: AssetsManager.information,
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
               builder: (context) => const AboutPlatformView(),
@@ -153,7 +155,7 @@ class CustomListPageMore extends StatelessWidget {
         ),
         CustomItemPageMore(
           text: 'تسجيل خروج',
-          image: AssetsManager.setting,
+          image: AssetsManager.exit,
           onTap: () {
             Navigator.of(context).pushAndRemoveUntil(
               MaterialPageRoute(

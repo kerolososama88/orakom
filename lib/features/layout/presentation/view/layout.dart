@@ -23,7 +23,7 @@ class Layout extends StatelessWidget {
           return Scaffold(
             body: cubit.bottomScreen[cubit.currentIndex],
             bottomNavigationBar: Container(
-              decoration:  BoxDecoration(
+              decoration: BoxDecoration(
                 color: AppColors.primary,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(30.r),
@@ -56,9 +56,12 @@ class Layout extends StatelessWidget {
                             AssetsManager.home,
                             color: Colors.white,
                           ),
-                          Text('الرئيسية',
-                              style: Style.textStyle10
-                                  .copyWith(color: Colors.white)),
+                          Text(
+                            'الرئيسية',
+                            style: Style.textStyle10.copyWith(
+                              color: Colors.white,
+                            ),
+                          ),
                           if (cubit.currentIndex == 0)
                             Container(
                               height: 8.h,

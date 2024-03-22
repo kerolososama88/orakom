@@ -7,6 +7,12 @@ class EditeCreditCardAction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return defaultButtom(function: (){}, color:AppColors.primary, text: 'حفظ التعديلات');
+    return defaultButtom(
+      function: () {
+        Navigator.of(context).pop();
+      },
+      color: AppColors.primary,
+      text: 'حفظ التعديلات',
+    );
   }
 }

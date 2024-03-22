@@ -12,7 +12,7 @@ class SearchFilter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 17.0.w, right: 17.0.w, bottom: 10.h),
+      padding: EdgeInsets.only(left: 17.0.w, right: 17.0.w, ),
       child: Row(
         children: [
           InkWell(

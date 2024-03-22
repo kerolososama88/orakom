@@ -13,15 +13,15 @@ class AppBarProductDetails extends StatelessWidget {
       children: [
         const CustomAppbarArrow(text: 'تفاصيل المنتج'),
         PositionedDirectional(
-          top: 39.h,
-          end: 30.w,
+          bottom: 30.h,
+          end: 27.w,
           child: InkWell(
             onTap: (){
               Navigator.of(context).pop();
             },
             child: Image.asset(
-              height: 24.h,
-              width: 24.w,
+              height: 20.h,
+              width: 20.w,
               AssetsManager.share,
             ),
           ),

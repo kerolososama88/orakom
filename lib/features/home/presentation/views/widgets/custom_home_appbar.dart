@@ -36,7 +36,7 @@ class CustomHomeAppBar extends StatelessWidget {
               return SizedBox(
                 width: 342.w,
                 height: 180.h,
-                child: Column(
+                child: Stack(
                   children: [
                     CarouselSlider(
                       items: imageList.map((imageUrl) {
@@ -74,27 +74,27 @@ class CustomHomeAppBar extends StatelessWidget {
                         },
                       ),
                     ),
-                    SizedBox(
-                      height: 10.h,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: imageList.map(
-                        (url) {
-                          int index = imageList.indexOf(url);
-                          return Container(
-                            width: 10.0.w,
-                            height: 10.0.h,
-                            margin: EdgeInsets.symmetric(horizontal: 4.0.w),
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: HomeCubit.get(context).index == index
-                                  ? AppColors.primary
-                                  : Colors.grey,
-                            ),
-                          );
-                        },
-                      ).toList(),
+                    PositionedDirectional(
+                      bottom:55.h,
+                      start:139.w,
+                      child: Row(
+                        children: imageList.map(
+                          (url) {
+                            int index = imageList.indexOf(url);
+                            return Container(
+                              width: 10.0.w,
+                              height: 10.0.h,
+                              margin: EdgeInsets.symmetric(horizontal: 4.0.w),
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: HomeCubit.get(context).index == index
+                                    ? AppColors.primary
+                                    : AppColors.whiteColor,
+                              ),
+                            );
+                          },
+                        ).toList(),
+                      ),
                     ),
                   ],
                 ),
@@ -113,7 +113,7 @@ class CustomHomeAppBar extends StatelessWidget {
             },
             child: Image.asset(
               width: 18.w,
-              height: 21.5.h,
+              height: 22.h,
               AssetsManager.noti,
             ),
           ),

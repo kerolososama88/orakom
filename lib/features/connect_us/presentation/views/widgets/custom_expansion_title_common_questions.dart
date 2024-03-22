@@ -10,7 +10,7 @@ class CustomExpansionTitleCommonQuestions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 17.w),
+      padding: EdgeInsets.symmetric(horizontal: 17.w,vertical: 6.h),
       child: ExpansionTile(
         // trailing: const Icon(
         //   Icons.add,

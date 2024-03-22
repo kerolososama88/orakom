@@ -28,6 +28,9 @@ Widget customTextFieldAuth({
             color: AppColors.textBlack,
           ),
         ),
+        SizedBox(
+          height: 11.h,
+        ),
         TextFormField(
           onTapOutside: onTapOutside,
           validator: (v) {

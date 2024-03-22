@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:orakom/core/constant/app_colors.dart';
 import 'package:orakom/core/constant/text_style.dart';
 
 Widget defaultButtom({
@@ -14,7 +15,7 @@ Widget defaultButtom({
       width: 313.w,
       height: 56.h,
       decoration: BoxDecoration(
-        color: const Color.fromRGBO(61, 155, 114, 1),
+        color: AppColors.primary,
         borderRadius: BorderRadius.circular(15),
       ),
       child: TextButton(

@@ -14,49 +14,65 @@ class RestorePasswordForm extends StatelessWidget {
   Widget build(BuildContext context) {
     var cubit = RestorePasswordCubit.get(context);
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 31.w),
-      child: TextFormField(
-        decoration: InputDecoration(
-          hintText: 'أدخل رقم الجوال',
-          hintStyle: Style.textStyle12,
-          contentPadding: const EdgeInsets.fromLTRB(0.0, 16.0, 15.0, 22.0),
-          fillColor: AppColors.fill,
-          filled: true,
-          border: OutlineInputBorder(
-            borderSide: BorderSide.none,
-            borderRadius: BorderRadius.circular(
-              16.r,
+      padding: EdgeInsets.only(left: 31.w,right:  31.w,top: 36.h),
+      child: Column(
+        children: [
+          Align(
+            alignment: AlignmentDirectional.topStart,
+            child: Text(
+              'رقم الجوال',
+              style: Style.textStyle14.copyWith(
+                color: AppColors.textBlack,
+              ),
             ),
           ),
-          suffixIcon: DropdownButtonHideUnderline(
-            child: BlocBuilder<RestorePasswordCubit, RestorePasswordState>(
-              builder: (context, state) {
-                return Padding(
-                  padding: EdgeInsets.only(left: 14.w),
-                  child: DropdownButton(
-                    value: state is RestorePasswordItemState
-                        ? state.item
-                        :cubit.listItem.first,
-                    items: cubit
-                        .listItem
-                        .map(
-                          (item) => DropdownMenuItem(
-                            value: item,
-                            child: Text(
-                              item,
-                            ),
-                          ),
-                        )
-                        .toList(),
-                    onChanged: (newValue) {
-                     cubit.changeValue(newValue!);
-                    },
-                  ),
-                );
-              },
+          SizedBox(
+            height: 11.h,
+          ),
+          TextFormField(
+            decoration: InputDecoration(
+              hintText: 'أدخل رقم الجوال',
+              hintStyle: Style.textStyle12,
+              contentPadding: const EdgeInsets.fromLTRB(0.0, 16.0, 15.0, 22.0),
+              fillColor: AppColors.fill,
+              filled: true,
+              border: OutlineInputBorder(
+                borderSide: BorderSide.none,
+                borderRadius: BorderRadius.circular(
+                  16.r,
+                ),
+              ),
+              suffixIcon: DropdownButtonHideUnderline(
+                child: BlocBuilder<RestorePasswordCubit, RestorePasswordState>(
+                  builder: (context, state) {
+                    return Padding(
+                      padding: EdgeInsets.only(left: 14.w),
+                      child: DropdownButton(
+                        value: state is RestorePasswordItemState
+                            ? state.item
+                            :cubit.listItem.first,
+                        items: cubit
+                            .listItem
+                            .map(
+                              (item) => DropdownMenuItem(
+                                value: item,
+                                child: Text(
+                                  item,
+                                ),
+                              ),
+                            )
+                            .toList(),
+                        onChanged: (newValue) {
+                         cubit.changeValue(newValue!);
+                        },
+                      ),
+                    );
+                  },
+                ),
+              ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }
